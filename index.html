@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="home"> <!-- Added ID to target for Home click -->
         <div class="slider">
             <div class="slide"></div>
             <div class="slide"></div>
@@ -21,14 +21,15 @@
 
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#electronics">Electronics</a></li>
-            <li><a href="#services">Services</a></li>
+            <!-- Updated anchor links -->
+            <li><a href="#home" onclick="location.reload();">Home</a></li> <!-- Refresh the page when clicked -->
+            <li><a href="#electronics">Electronics</a></li> <!-- Scroll to Electronics section -->
+            <li><a href="#services">Services</a></li> <!-- Scroll to Services section -->
             <li><a href="tel:+254792853759">Contact</a></li> <!-- Updated to dial the number -->
         </ul>
     </nav>
 
-    <section class="products">
+    <section class="products" id="electronics"> <!-- Added ID to target for Electronics click -->
         <div class="product-slider">
             <!-- Original product group -->
             <div class="product-group">
@@ -96,7 +97,7 @@
                 <p>Phone: +254 792 853 759  or  +254 718 213 131</p>
                 <p>Email: jamtech57@gmail.com</p>
             </div>
-            <div>
+            <div id="services"> <!-- Added ID to target for Services click -->
                 <h3>Services</h3>
                 <p>M-Pesa Services</p>
                 <p>DSTV Installation</p>
