@@ -6,10 +6,17 @@
     font-family: Arial, sans-serif;
 }
 
+/* Ensure full height */
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
 /* Header Styles */
 .header {
     position: relative;
-    height: 400px;
+    min-height: 100vh; /* Ensures it takes full height but doesn't exceed the screen */
     overflow: hidden;
 }
 
@@ -52,32 +59,18 @@
     color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     z-index: 1;
-}
-/* Update the header-content class */
-.header-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    z-index: 1;
     padding: 2rem;
-    /* Add these properties for the background */
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
-    border-radius: 8px; /* Optional: rounds the corners */
-    backdrop-filter: blur(5px); /* Optional: adds a slight blur effect */
-    width: 80%; /* Optional: controls the width of the background */
-    max-width: 600px; /* Optional: limits the maximum width */
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    width: 80%;
+    max-width: 600px;
 }
 
-/* Optional: Add hover effect to make it more interactive */
 .header-content:hover {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* Optional: Style the text inside */
 .header-content h1 {
     margin-bottom: 1rem;
     font-size: 2.5rem;
@@ -86,6 +79,7 @@
 .header-content p {
     font-size: 1.2rem;
 }
+
 /* Navigation Styles */
 nav {
     background: #1a237e;
@@ -118,6 +112,7 @@ nav a:hover {
     padding: 2rem;
     overflow: hidden;
     position: relative;
+    min-height: 100vh; /* Ensures the product section takes full height */
 }
 
 .product-slider {
@@ -161,7 +156,6 @@ nav a:hover {
     font-weight: bold;
 }
 
-/* Product Slider Animation */
 @keyframes slideProducts {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
@@ -226,7 +220,7 @@ footer {
 /* Responsive Styles */
 @media (max-width: 768px) {
     .header {
-        height: 300px;
+        min-height: 300px; /* Adjust header height on smaller screens */
     }
 
     .product-card {
@@ -255,5 +249,14 @@ footer {
 
     .footer-content {
         grid-template-columns: 1fr;
+    }
+
+    footer {
+        padding: 3rem 2rem;
+    }
+
+    /* Ensure header content is not cut off on smaller screens */
+    .header-content {
+        max-width: 90%;
     }
 }
