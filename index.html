@@ -5,79 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jamtech Electricals and Electronics</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Floating widget styles */
-        .float-widget {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background: #ff4081;
-            color: white;
-            padding: 1rem;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            z-index: 1000;
-            transition: transform 0.3s ease;
-        }
-
-        .float-widget:hover {
-            transform: scale(1.1);
-            background: #f50057;
-        }
-
-        /* Modal styles */
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed;
-            z-index: 1001; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            width: 300px;
-        }
-
-        .modal input[type="text"] {
-            width: 100%;
-            padding: 0.5rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        .modal button {
-            width: 100%;
-            padding: 0.7rem;
-            background-color: #ff4081;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .modal button:hover {
-            background-color: #f50057;
-        }
-    </style>
 </head>
 <body>
-    <header class="header" id="home">
+    <header class="header" id="home"> <!-- Added ID to target for Home click -->
         <div class="slider">
             <div class="slide"></div>
             <div class="slide"></div>
@@ -91,15 +21,73 @@
 
     <nav>
         <ul>
-            <li><a href="#home" onclick="location.reload();">Home</a></li>
-            <li><a href="#electronics">Electronics</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="tel:+254792853759">Contact</a></li>
+            <!-- Updated anchor links -->
+            <li><a href="#home" onclick="location.reload();">Home</a></li> <!-- Refresh the page when clicked -->
+            <li><a href="#electronics">Electronics</a></li> <!-- Scroll to Electronics section -->
+            <li><a href="#services">Services</a></li> <!-- Scroll to Services section -->
+            <li><a href="tel:+254792853759">Contact</a></li> <!-- Updated to dial the number -->
         </ul>
     </nav>
 
-    <section class="products" id="electronics">
-        <!-- Product showcase here -->
+    <section class="products" id="electronics"> <!-- Added ID to target for Electronics click -->
+        <div class="product-slider">
+            <!-- Original product group -->
+            <div class="product-group">
+                <div class="product-card">
+                    <img src="images/smarttv.webp" alt="Smart TV">
+                    <h3>Smart TV 55"</h3>
+                    <p>KSH 45,000</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/smartphones.jpg" alt="Smartphone">
+                    <h3>Latest Smartphone</h3>
+                    <p>KSH 25,000</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/cctv.avif" alt="CCTV Camera">
+                    <h3>CCTV Camera</h3>
+                    <p>KSH 8,000</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/bulbs.jpg" alt="LED Bulb">
+                    <h3>LED Bulb Pack</h3>
+                    <p>KSH 1,200</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/hifi.webp" alt="HiFi System">
+                    <h3>HiFi System</h3>
+                    <p>KSH 35,000</p>
+                </div>
+            </div>
+            <!-- Duplicated product group for seamless loop -->
+            <div class="product-group">
+                <div class="product-card">
+                    <img src="images/smarttv.webp" alt="Smart TV">
+                    <h3>Smart TV 55"</h3>
+                    <p>KSH 45,000</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/smartphones.jpg" alt="Smartphone">
+                    <h3>Latest Smartphone</h3>
+                    <p>KSH 25,000</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/cctv.avif" alt="CCTV Camera">
+                    <h3>CCTV Camera</h3>
+                    <p>KSH 8,000</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/bulbs.jpg" alt="LED Bulb">
+                    <h3>LED Bulb Pack</h3>
+                    <p>KSH 1,200</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/hifi.webp" alt="HiFi System">
+                    <h3>HiFi System</h3>
+                    <p>KSH 35,000</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -109,40 +97,45 @@
                 <p>Phone: +254 792 853 759  or  +254 718 213 131</p>
                 <p>Email: jamtech57@gmail.com</p>
             </div>
-            <div id="services">
+            <div id="services"> <!-- Added ID to target for Services click -->
                 <h3>Services</h3>
                 <p>M-Pesa Services</p>
                 <p>DSTV Installation</p>
                 <p>CCTV Installation</p>
                 <p>TV Mounting</p>
             </div>
+            <div>
+                <h3>Working Hours</h3>
+                <p>Monday - Saturday: 8AM - 11PM</p>
+                <p>Sunday: 9AM - 10PM</p>
+            </div>
         </div>
     </footer>
 
-    <div class="float-widget" onclick="openModal()">🛒</div> <!-- Floating button click to open modal -->
+    <!-- Floating widget -->
+    <div class="float-widget" onclick="openForm()">🛒</div>
 
-    <!-- Modal to request product -->
-    <div class="modal" id="productModal">
-        <div class="modal-content">
-            <h2>Request a Product</h2>
-            <form action="https://formspree.io/f/xqaavnva" method="POST"> <!-- Formspree URL for email submission -->
-                <input type="text" name="product" placeholder="Enter product name" required>
-                <button type="submit">Submit</button>
-            </form>
-            <button onclick="closeModal()">Close</button>
-        </div>
+    <!-- Hidden form -->
+    <div id="product-form" class="form-popup">
+        <form action="https://formspree.io/f/xqaavnja" method="POST" class="form-container">
+            <h3>Enter the Product Name:</h3>
+            <input type="text" name="product" placeholder="Enter product name" required>
+            <button type="submit" class="submit-btn">Submit</button>
+            <button type="button" class="close-btn" onclick="closeForm()">Close</button>
+        </form>
     </div>
 
     <script>
-        // Function to open the modal
-        function openModal() {
-            document.getElementById("productModal").style.display = "flex";
+        // Function to open the form
+        function openForm() {
+            document.getElementById("product-form").style.display = "block";
         }
 
-        // Function to close the modal
-        function closeModal() {
-            document.getElementById("productModal").style.display = "none";
+        // Function to close the form
+        function closeForm() {
+            document.getElementById("product-form").style.display = "none";
         }
     </script>
+
 </body>
 </html>
