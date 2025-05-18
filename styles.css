@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    font-family: 'Orbitron', sans-serif;
 }
 
 body {
@@ -15,29 +15,23 @@ body {
 /* ===== Modern Glass Morphism Header ===== */
 .header {
     position: relative;
-    height: 500px; /* Slightly taller for impact */
+    height: 500px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     background: 
         linear-gradient(135deg, rgba(26, 35, 126, 0.2) 0%, rgba(13, 13, 26, 0.4) 100%),
-        url('images/header\ 1.png') center/cover no-repeat; /* Default background */
-    backdrop-filter: blur(10px); /* Glass effect */
+        url('images/header\ 1.png') center/cover no-repeat;
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Remove old slider animation (delete these) */
-.slider, .slide, @keyframes slide { 
-    display: none !important; 
-}
-
-/* Modern Header Content */
 .header-content {
     text-align: center;
     padding: 3rem;
-    background: rgba(255, 255, 255, 0.1); /* Glass background */
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-radius: 24px;
@@ -49,23 +43,20 @@ body {
     width: 90%;
 }
 
-/* Title Styling (Clean, No Neon) */
 .header-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: white; /* Solid white */
+    color: white;
     font-weight: 600;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Subtitle Styling */
 .header-content p {
     font-size: 1.3rem;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 1.5rem;
 }
 
-/* Optional: Add a subtle CTA button */
 .cta-button {
     display: inline-block;
     padding: 12px 30px;
@@ -83,7 +74,8 @@ body {
     background: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
 }
-/* Navigation Styles */
+
+/* Navigation Styles (Unchanged) */
 nav {
     background: rgba(26, 35, 126, 0.9);
     padding: 1rem;
@@ -106,60 +98,70 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
     color: #ff4081;
-    text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081;
 }
 
-/* Products Section - Single Item Slider */
+/* Products Section (Unchanged) */
 .products {
-    padding: 3rem 1rem;
-    background: linear-gradient(135deg, #1a237e, #0d0d1a);
-    position: relative;
+    padding: 2rem;
     overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, #1a237e, #0d0d1a);
 }
 
 .product-slider {
     display: flex;
-    gap: 20px;
-    padding: 20px 0;
-    overflow-x: auto; /* Enable horizontal scroll */
-    scroll-snap-type: x mandatory; /* Snap to each product */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-    scrollbar-width: none; /* Hide scrollbar (Firefox) */
-}
-
-.product-slider::-webkit-scrollbar {
-    display: none; /* Hide scrollbar (Chrome/Safari) */
+    width: fit-content;
+    animation: slideProducts 40s linear infinite;
 }
 
 .product-card {
-    scroll-snap-align: start; /* Snap alignment */
-    min-width: 250px; /* Fixed width per product */
-    flex: 0 0 auto; /* Prevent stretching */
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
+    min-width: 200px;
+    padding: 1rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
+    margin-right: 1rem;
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
 }
 
-/* Remove the old animation */
-@keyframes slideProducts {
-    /* Delete this entire block */
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 64, 129, 0.5);
 }
 
-/* Product Slider Animation */
+.product-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.product-card p {
+    color: #ff4081;
+    font-weight: bold;
+}
+
 @keyframes slideProducts {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
 
-/* Footer Styles */
+/* Footer (Unchanged) */
 footer {
     background: rgba(26, 35, 126, 0.9);
     color: white;
@@ -188,7 +190,7 @@ footer {
     color: #00bcd4;
 }
 
-/* Float Widget Styles */
+/* Float Widget (Unchanged) */
 .float-widget {
     position: fixed;
     bottom: 2rem;
@@ -213,7 +215,7 @@ footer {
     background: #f50057;
 }
 
-/* Form Popup Styles */
+/* Form Popup (Unchanged) */
 .form-popup {
     display: none;
     position: fixed;
@@ -231,7 +233,6 @@ footer {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Form Container */
 .form-container {
     display: flex;
     flex-direction: column;
@@ -245,7 +246,6 @@ footer {
     color: #ff4081;
 }
 
-/* Input Styles */
 .form-container input {
     padding: 0.8rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -256,7 +256,6 @@ footer {
     color: #fff;
 }
 
-/* Submit Button */
 .form-container button {
     padding: 0.8rem;
     background-color: #ff4081;
@@ -272,7 +271,6 @@ footer {
     background-color: #f50057;
 }
 
-/* Close Button */
 .close-btn {
     background-color: #888;
     color: white;
@@ -283,21 +281,21 @@ footer {
     background-color: #555;
 }
 
-/* Responsive Styles */
+/* Responsive (Unchanged) */
 @media (max-width: 768px) {
     .header {
-        height: 300px;
+        height: 400px;
     }
-
+    .header-content h1 {
+        font-size: 2rem;
+    }
     .product-card {
         min-width: 150px;
     }
-
     .product-card img {
         width: 120px;
         height: 120px;
     }
-
     nav ul {
         gap: 1rem;
         flex-wrap: wrap;
@@ -306,13 +304,14 @@ footer {
 
 @media (max-width: 480px) {
     .header-content h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
-
+    .header-content p {
+        font-size: 1rem;
+    }
     .product-card {
         min-width: 130px;
     }
-
     .footer-content {
         grid-template-columns: 1fr;
     }
