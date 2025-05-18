@@ -119,55 +119,43 @@ nav a:hover {
     text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081;
 }
 
-/* Products Section Styles */
+/* Products Section - Single Item Slider */
 .products {
-    padding: 2rem;
-    overflow: hidden;
-    position: relative;
+    padding: 3rem 1rem;
     background: linear-gradient(135deg, #1a237e, #0d0d1a);
+    position: relative;
+    overflow: hidden;
 }
 
 .product-slider {
     display: flex;
-    width: fit-content;
-    animation: slideProducts 40s linear infinite;
+    gap: 20px;
+    padding: 20px 0;
+    overflow-x: auto; /* Enable horizontal scroll */
+    scroll-snap-type: x mandatory; /* Snap to each product */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    scrollbar-width: none; /* Hide scrollbar (Firefox) */
+}
+
+.product-slider::-webkit-scrollbar {
+    display: none; /* Hide scrollbar (Chrome/Safari) */
 }
 
 .product-card {
-    min-width: 200px;
-    padding: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-    margin-right: 1rem;
+    scroll-snap-align: start; /* Snap alignment */
+    min-width: 250px; /* Fixed width per product */
+    flex: 0 0 auto; /* Prevent stretching */
+    padding: 1.5rem;
     background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
     backdrop-filter: blur(5px);
 }
 
-.product-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255, 64, 129, 0.5);
-}
-
-.product-card img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-}
-
-.product-card h3 {
-    color: #fff;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-}
-
-.product-card p {
-    color: #ff4081;
-    font-weight: bold;
+/* Remove the old animation */
+@keyframes slideProducts {
+    /* Delete this entire block */
 }
 
 /* Product Slider Animation */
